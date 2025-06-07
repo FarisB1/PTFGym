@@ -5,69 +5,69 @@ Dobrodošli u repozitorij informacionog sistema za kompaniju PTFGym. Ovaj sistem
 ## Ciljevi sistema
 Cilj ovog informacionog sistema je:
 
-Omogućiti efikasnu komunikaciju između i unutar odjela (treneri, administracija, nutricionisti).
+- Omogućiti efikasnu komunikaciju između i unutar odjela (treneri, administracija, nutricionisti).
 
-Omogućiti zaposlenicima praćenje prisustva članova, zakazivanje termina i personalizaciju treninga.
+- Omogućiti zaposlenicima praćenje prisustva članova, zakazivanje termina i personalizaciju treninga.
 
-Članovima omogućiti uvid u treninge, rezervaciju termina, praćenje napretka i dobivanje nutricionističkih savjeta.
+- Članovima omogućiti uvid u treninge, rezervaciju termina, praćenje napretka i dobivanje nutricionističkih savjeta.
 
-Integrisati online plaćanje članarina i automatizaciju obnavljanja članstva.
+- Integrisati online plaćanje članarina i automatizaciju obnavljanja članstva.
 
 ## Opseg projekta
 Obuhvaćene funkcionalnosti:
 
-Upravljanje članovima i njihovim podacima
+- Upravljanje članovima i njihovim podacima
 
-Zakazivanje grupnih i personalnih treninga
+- Zakazivanje grupnih i personalnih treninga
 
-Online plaćanje i upravljanje članarinama
+- Online plaćanje i upravljanje članarinama
 
-Povratne informacije i ocjenjivanje usluga
+- Povratne informacije i ocjenjivanje usluga
 
-Interna komunikacija među zaposlenicima
+- Interna komunikacija među zaposlenicima
 
-Savjeti o prehrani od strane nutricionista
+- Savjeti o prehrani od strane nutricionista
 
-Praćenje prisustva članova
+- Praćenje prisustva članova
 
 Napomena: Sistem ne uključuje:
 
-HR menadžment (upravljanje zaposlenima)
+- HR menadžment (upravljanje zaposlenima)
 
-Finansijsko računovodstvo
+- Finansijsko računovodstvo
 
-Marketing i prijave kvarova
+- Marketing i prijave kvarova
 
-Detaljnu analitiku korisničkog ponašanja
+- Detaljnu analitiku korisničkog ponašanja
 
-Rukovanje plaćanjima izvršenim na recepciji
+- Rukovanje plaćanjima izvršenim na recepciji
 
 ## Funkcionalni zahtjevi
-Prijava i upravljanje članovima
+- Prijava i upravljanje članovima
 
-Zakazivanje termina (personalni i grupni treninzi)
+- Zakazivanje termina (personalni i grupni treninzi)
 
-Online plaćanje članarina i automatsko obnavljanje
+- Online plaćanje članarina i automatsko obnavljanje
 
-Povratne informacije i ocjenjivanje trenera/progama
+- Povratne informacije i ocjenjivanje trenera/progama
 
-Centralizovana komunikacija između zaposlenih
+- Centralizovana komunikacija između zaposlenih
 
-Nutricionistički savjeti za članove
+- Nutricionistički savjeti za članove
 
-Evidentiranje prisutnosti članova
+- Evidentiranje prisutnosti članova
 
 ## Nefunkcionalni zahtjevi
-Performanse: Svi zahtjevi moraju biti obrađeni u roku od 2 sekunde.
+- Performanse: Svi zahtjevi moraju biti obrađeni u roku od 2 sekunde.
 
-Sigurnost: Podaci i transakcije zaštićeni enkripcijom i autentifikacijom.
+- Sigurnost: Podaci i transakcije zaštićeni enkripcijom i autentifikacijom.
 
-Dostupnost: Sistem mora imati 99% dostupnosti (osim održavanja).
+- Dostupnost: Sistem mora imati 99% dostupnosti (osim održavanja).
 
-UX/UI: Prilagođeno desktop i mobilnim uređajima, višejezična podrška.
+- UX/UI: Prilagođeno desktop i mobilnim uređajima, višejezična podrška.
 
-Integracija: Podrška za spajanje sa eksternim servisima za plaćanje.
+- Integracija: Podrška za spajanje sa eksternim servisima za plaćanje.
 
-Skalabilnost: Sistem podržava rast korisničke baze.
+- Skalabilnost: Sistem podržava rast korisničke baze.
 
-Održavanje: Dokumentacija omogućava jednostavno ažuriranje i podršku.
+- Održavanje: Dokumentacija omogućava jednostavno ažuriranje i podršku.
