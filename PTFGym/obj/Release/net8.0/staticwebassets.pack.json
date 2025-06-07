@@ -1,0 +1,381 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\PTFGym.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PTFGym.xoadpjv8lr.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\css\\About.css",
+      "PackagePath": "staticwebassets\\css\\About.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\css\\Contact.css",
+      "PackagePath": "staticwebassets\\css\\Contact.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\css\\Page-1.css",
+      "PackagePath": "staticwebassets\\css\\Page-1.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\css\\nicepage.css",
+      "PackagePath": "staticwebassets\\css\\nicepage.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\0fd3416c.jpeg",
+      "PackagePath": "staticwebassets\\images\\0fd3416c.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\13e691a14a4f0aa101b25bfb1e5a2222c35103b31a44143402040872d204dcc8d559f2e26d8f030c19d7b0da8625d1cc87ffa9fe2f4bd070879aae_1280.jpg",
+      "PackagePath": "staticwebassets\\images\\13e691a14a4f0aa101b25bfb1e5a2222c35103b31a44143402040872d204dcc8d559f2e26d8f030c19d7b0da8625d1cc87ffa9fe2f4bd070879aae_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\2f2e75396430a55347f7ad1615223d87a7eea3d0adc4c8038ec4547fd0e120c401b06d6055127c894535806c6af83276c5a0763895aec7d175b386_1280.jpg",
+      "PackagePath": "staticwebassets\\images\\2f2e75396430a55347f7ad1615223d87a7eea3d0adc4c8038ec4547fd0e120c401b06d6055127c894535806c6af83276c5a0763895aec7d175b386_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\34f9eb8bba4308a2ff3aaed2c3e8b872cc626ea19f10ec97bb6dc609b55ef50a2172c41c8797a831543de3fb78a7b4007d1b7d184ac3d0f43b385b_1280.jpg",
+      "PackagePath": "staticwebassets\\images\\34f9eb8bba4308a2ff3aaed2c3e8b872cc626ea19f10ec97bb6dc609b55ef50a2172c41c8797a831543de3fb78a7b4007d1b7d184ac3d0f43b385b_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\38232f62e12c6afe41db4f9afef216d92fbe5e95a1dfcac85b455f154208c0f53c84dbf8f3e7426f629a4d2f2af17012dbfc00447f5be25d09806d_1280.jpg",
+      "PackagePath": "staticwebassets\\images\\38232f62e12c6afe41db4f9afef216d92fbe5e95a1dfcac85b455f154208c0f53c84dbf8f3e7426f629a4d2f2af17012dbfc00447f5be25d09806d_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\68f64b9d.jpeg",
+      "PackagePath": "staticwebassets\\images\\68f64b9d.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\6c85f6847366757fa1f674e3cefec2b7a899f40294ac104b9456d5b58f7edfd63c3def7d28884710062eac6b5831874c494082a98de7943bdda30f_1280.jpg",
+      "PackagePath": "staticwebassets\\images\\6c85f6847366757fa1f674e3cefec2b7a899f40294ac104b9456d5b58f7edfd63c3def7d28884710062eac6b5831874c494082a98de7943bdda30f_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\8ad73f3c.jpeg",
+      "PackagePath": "staticwebassets\\images\\8ad73f3c.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\a3b564ef9f6e0c52a10b99f59431c021e7d2a919f1123a6f44acf5702cfc36d7da6f99cbb98c8fa483534b14cfddc5c2a07f5dfdefa9400d02c2ab_1280.jpg",
+      "PackagePath": "staticwebassets\\images\\a3b564ef9f6e0c52a10b99f59431c021e7d2a919f1123a6f44acf5702cfc36d7da6f99cbb98c8fa483534b14cfddc5c2a07f5dfdefa9400d02c2ab_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\b381f47ba4d10983d955f1d5612c332c26d41a4f0e4371b5453a3e287fe496243ecf6f0614d87db74c8ffc672737a9791f0fb6716cc18842783092_1280.jpg",
+      "PackagePath": "staticwebassets\\images\\b381f47ba4d10983d955f1d5612c332c26d41a4f0e4371b5453a3e287fe496243ecf6f0614d87db74c8ffc672737a9791f0fb6716cc18842783092_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\d61053a85efcdcbe368ff4e377983ad1968fb49054bc1e0e28d29ac47ff58d39951738a066851ab45124e8af4efc0d05dbf6c3e4a025596e5c70db_1280.jpg",
+      "PackagePath": "staticwebassets\\images\\d61053a85efcdcbe368ff4e377983ad1968fb49054bc1e0e28d29ac47ff58d39951738a066851ab45124e8af4efc0d05dbf6c3e4a025596e5c70db_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\db4a87d4b683e8baf1825df2b1e39f8d75d75361ed1810340830c698b31b5927d9009058b20e80823fb4c5aff6aff2fcee649ecca5d2619fc9811e_1280.jpg",
+      "PackagePath": "staticwebassets\\images\\db4a87d4b683e8baf1825df2b1e39f8d75d75361ed1810340830c698b31b5927d9009058b20e80823fb4c5aff6aff2fcee649ecca5d2619fc9811e_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\fb8f536ebbc0687508e3c7aaa567502d3313a0131d7bf52f97b8a791edf6ffd8737676c386ee73c4536e9ded6be1601d9468295a246c0bbcfc40db_1280.jpg",
+      "PackagePath": "staticwebassets\\images\\fb8f536ebbc0687508e3c7aaa567502d3313a0131d7bf52f97b8a791edf6ffd8737676c386ee73c4536e9ded6be1601d9468295a246c0bbcfc40db_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\logo-white.png",
+      "PackagePath": "staticwebassets\\images\\logo-white.png"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\photo-1472437605411-8816f0e62691.jpeg",
+      "PackagePath": "staticwebassets\\images\\photo-1472437605411-8816f0e62691.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\photo-1520371764250-8213f40bc3ed.jpeg",
+      "PackagePath": "staticwebassets\\images\\photo-1520371764250-8213f40bc3ed.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\photo-1526631974657-8ba8d0e40008.jpeg",
+      "PackagePath": "staticwebassets\\images\\photo-1526631974657-8ba8d0e40008.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\photo-1565806069807-b0ea62cbe644.jpeg",
+      "PackagePath": "staticwebassets\\images\\photo-1565806069807-b0ea62cbe644.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\photo-1568379067004-3b3d36c614d0.jpeg",
+      "PackagePath": "staticwebassets\\images\\photo-1568379067004-3b3d36c614d0.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\photo-1587105539164-99cee5c6c14f.jpeg",
+      "PackagePath": "staticwebassets\\images\\photo-1587105539164-99cee5c6c14f.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\photo-1591019539117-3b51ba534d28.jpeg",
+      "PackagePath": "staticwebassets\\images\\photo-1591019539117-3b51ba534d28.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\photo-1591261064089-51ae322d91df.jpeg",
+      "PackagePath": "staticwebassets\\images\\photo-1591261064089-51ae322d91df.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\photo-1615362088476-4419b7491250.jpeg",
+      "PackagePath": "staticwebassets\\images\\photo-1615362088476-4419b7491250.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\images\\qw.jpg",
+      "PackagePath": "staticwebassets\\images\\qw.jpg"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\js\\nicepage.js",
+      "PackagePath": "staticwebassets\\js\\nicepage.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\farex\\Documents\\GitHub\\Teretana\\PTFGym\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.PTFGym.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.PTFGym.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.PTFGym.props",
+      "PackagePath": "build\\PTFGym.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PTFGym.props",
+      "PackagePath": "buildMultiTargeting\\PTFGym.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.PTFGym.props",
+      "PackagePath": "buildTransitive\\PTFGym.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

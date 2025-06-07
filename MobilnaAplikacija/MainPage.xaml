@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaAplikacija.MainPage"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Title="Početna">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto,*" Padding="24">
+            <!-- Header Section -->
+            <VerticalStackLayout Grid.Row="0" Spacing="4" Margin="0,24,0,32">
+                <Label Text="PTF Teretana"
+                       FontSize="32"
+                       FontAttributes="Bold"/>
+                <Label Text="Dobrodošli u vašu fitness aplikaciju"
+                       TextColor="{StaticResource TextSecondaryColor}"/>
+            </VerticalStackLayout>
+
+            <!-- Main Content -->
+            <Grid Grid.Row="1" 
+                  RowDefinitions="Auto,Auto,Auto,Auto" 
+                  ColumnDefinitions="*,*" 
+                  RowSpacing="16" 
+                  ColumnSpacing="16">
+
+                <!-- Treninzi Section (Visible for all roles) -->
+                <Frame Grid.Row="0" Grid.Column="0" 
+                       Padding="16" 
+                       BorderColor="{StaticResource PrimaryColor}"
+                       IsVisible="{Binding IsTerminiVisible}">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="&#x1F3CB;" 
+                               FontSize="24" 
+                               HorizontalOptions="Center"/>
+                        <Button Text="Termini"
+                                Clicked="OnTerminiButtonClicked"
+                                BackgroundColor="Transparent"
+                                TextColor="{StaticResource PrimaryColor}"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Napredak Section (Visible for Clan and Trener) -->
+                <Frame Grid.Row="0" Grid.Column="1" 
+                       Padding="16" 
+                       BorderColor="{StaticResource PrimaryColor}"
+                       IsVisible="{Binding IsNapredakVisible}">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="&#x1F4C8;" 
+                               FontSize="24" 
+                               HorizontalOptions="Center"/>
+                        <Button Text="Napredak"
+                                Clicked="OnNapredakButtonClicked"
+                                BackgroundColor="Transparent"
+                                TextColor="{StaticResource PrimaryColor}"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Rezervacije Section (Visible for Trener) -->
+                <Frame Grid.Row="1" Grid.Column="0" 
+                       Padding="16" 
+                       BorderColor="{StaticResource PrimaryColor}"
+                       IsVisible="{Binding IsRezervacijaVisible}">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="&#x1F4C5;" 
+                               FontSize="24" 
+                               HorizontalOptions="Center"/>
+                        <Button Text="Rezervacije"
+                                Clicked="OnRezervacijeButtonClicked"
+                                BackgroundColor="Transparent"
+                                TextColor="{StaticResource PrimaryColor}"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Članarine Section (Visible for Clan and Trener) -->
+                <Frame Grid.Row="1" Grid.Column="1" 
+                       Padding="16" 
+                       BorderColor="{StaticResource PrimaryColor}"
+                       IsVisible="{Binding IsClanarineVisible}">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="&#x1F4B3;" 
+                               FontSize="24" 
+                               HorizontalOptions="Center"/>
+                        <Button Text="Članarine"
+                                Clicked="OnMembershipViewButtonClicked"
+                                BackgroundColor="Transparent"
+                                TextColor="{StaticResource PrimaryColor}"/>
+                    </VerticalStackLayout>
+                </Frame>
+                <!-- Treneri Section (Visible for Admin) -->
+                <Frame Grid.Row="2" Grid.Column="0" 
+                       Padding="16" 
+                       BorderColor="{StaticResource PrimaryColor}"
+                       IsVisible="{Binding IsTreneriVisible}">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="&#x1F3C3;" 
+                               FontSize="24" 
+                               HorizontalOptions="Center"/>
+                        <Button Text="Treneri"
+                                Clicked="OnTreneriButtonClicked"
+                                BackgroundColor="Transparent"
+                                TextColor="{StaticResource PrimaryColor}"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+
+                <!-- Admin Panel Section (Visible for Admin) -->
+                <Frame Grid.Row="2" Grid.Column="1" 
+                       Padding="16" 
+                       BorderColor="{StaticResource PrimaryColor}"
+                       IsVisible="{Binding IsAdminPanelVisible}">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="&#x1F6E0;" 
+                               FontSize="24" 
+                               HorizontalOptions="Center"/>
+                        <Button Text="Admin Panel"
+                                Clicked="OnAdminDashboardPageButtonClicked"
+                                BackgroundColor="Transparent"
+                                TextColor="{StaticResource PrimaryColor}"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Quick Actions Section (Visible for all roles) -->
+                <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+                       Padding="16"
+                       BorderColor="{StaticResource SecondaryColor}">
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="Brze Akcije"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"/>
+
+                        <Button Text="Nova Rezervacija"
+                                Clicked="OnCreateRezervacijaButtonClicked"
+                                BackgroundColor="{StaticResource PrimaryColor}"
+                                IsVisible="{Binding IsCreateRezervacijaVisible}"/>
+
+                        <Button Text="Unesi Napredak"
+                                Clicked="OnCreateNapredakButtonClicked"
+                                BackgroundColor="{StaticResource PrimaryColor}"
+                                IsVisible="{Binding IsCreateNapredakVisible}"/>
+
+                        <Button Text="Odjava"
+                                Clicked="OnLogoutButtonClicked"
+                                BackgroundColor="{StaticResource ErrorColor}"
+                                TextColor="White"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

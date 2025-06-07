@@ -1,0 +1,2691 @@
+[
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "Index",
+    "RelativePath": "",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RegisterController",
+    "Method": "Register",
+    "RelativePath": "Account/Register",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RegisterController",
+    "Method": "Register",
+    "RelativePath": "Account/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.AccountController",
+    "Method": "LoginApi",
+    "RelativePath": "api/Account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "PTFGym.Models.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.AccountController",
+    "Method": "RegisterApi",
+    "RelativePath": "api/Account/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "PTFGym.Models.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.AdminApiController",
+    "Method": "AssignTrenerRole",
+    "RelativePath": "api/AdminApi/AssignTrenerRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PTFGym.Controllers.AdminApiController\u002BAssignTrenerRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MembershipController",
+    "Method": "GetCurrentMembership",
+    "RelativePath": "api/Membership/current/{clanId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PTFGym.DTO.ClanarinaDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MembershipController",
+    "Method": "RenewMembership",
+    "RelativePath": "api/Membership/renew",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RenewMembershipRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PTFGym.DTO.ClanarinaDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ChatController",
+    "Method": "GetUsers",
+    "RelativePath": "Chat/GetUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClansController",
+    "Method": "Index",
+    "RelativePath": "Clan",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClanarinasController",
+    "Method": "Index",
+    "RelativePath": "Clanarina",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClanarinasController",
+    "Method": "Create",
+    "RelativePath": "Clanarinas/Create",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClanarinasController",
+    "Method": "Create",
+    "RelativePath": "Clanarinas/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClanId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumPocetka",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumZavrsetka",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Iznos",
+        "Type": "System.Single",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumPocetkaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumKrajaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Rezervacije",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Rezervacija, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Napredak",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Clanarine",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Clanarina, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClanarinasController",
+    "Method": "Delete",
+    "RelativePath": "Clanarinas/Delete",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClanarinasController",
+    "Method": "DeleteConfirmed",
+    "RelativePath": "Clanarinas/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClanarinasController",
+    "Method": "Details",
+    "RelativePath": "Clanarinas/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClanarinasController",
+    "Method": "Edit",
+    "RelativePath": "Clanarinas/Edit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClanarinasController",
+    "Method": "Edit",
+    "RelativePath": "Clanarinas/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClanId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumPocetka",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumZavrsetka",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Iznos",
+        "Type": "System.Single",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumPocetkaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumKrajaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Rezervacije",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Rezervacija, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Napredak",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Clanarine",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Clanarina, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClanarinasController",
+    "Method": "Index",
+    "RelativePath": "Clanarinas/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClanarinasController",
+    "Method": "ClanIndex",
+    "RelativePath": "ClanIndex",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClansController",
+    "Method": "Create",
+    "RelativePath": "Clans/Create",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClansController",
+    "Method": "Create",
+    "RelativePath": "Clans/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumPocetkaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumKrajaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rezervacije",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Rezervacija, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Napredak",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clanarine",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Clanarina, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClansController",
+    "Method": "Delete",
+    "RelativePath": "Clans/Delete",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClansController",
+    "Method": "DeleteConfirmed",
+    "RelativePath": "Clans/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClansController",
+    "Method": "Details",
+    "RelativePath": "Clans/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClansController",
+    "Method": "Edit",
+    "RelativePath": "Clans/Edit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClansController",
+    "Method": "Edit",
+    "RelativePath": "Clans/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumPocetkaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumKrajaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rezervacije",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Rezervacija, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Napredak",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clanarine",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Clanarina, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClansController",
+    "Method": "Index",
+    "RelativePath": "Clans/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "CreateNapredakAPI",
+    "RelativePath": "Home/CreateNapredakAPI",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "napredak",
+        "Type": "PTFGym.Models.Napredak",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "CreateRezervacijaAPI",
+    "RelativePath": "Home/CreateRezervacijaAPI",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rezervacija",
+        "Type": "PTFGym.Models.Rezervacija",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "Error",
+    "RelativePath": "Home/Error",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetAllClanarina",
+    "RelativePath": "Home/GetAllClanarina",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetAllClanarine",
+    "RelativePath": "Home/GetAllClanarine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[PTFGym.Models.Clanarina, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetAllClanovi",
+    "RelativePath": "Home/GetAllClanovi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[PTFGym.Models.Clan, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetAllClans",
+    "RelativePath": "Home/GetAllClans",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetAllNapredak",
+    "RelativePath": "Home/GetAllNapredak",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetAllNapredaks",
+    "RelativePath": "Home/GetAllNapredaks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetAllRezervacija",
+    "RelativePath": "Home/GetAllRezervacija",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[PTFGym.Models.Rezervacija, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetAllRezervacije",
+    "RelativePath": "Home/GetAllRezervacije",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetAllTermini",
+    "RelativePath": "Home/GetAllTermini",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetAllTerminTrener",
+    "RelativePath": "Home/GetAllTerminTrener/{trenerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trenerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetAllTreneri",
+    "RelativePath": "Home/GetAllTreneri",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[PTFGym.Models.Trener, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetClanById",
+    "RelativePath": "Home/GetClanById/{clanId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetClanClanarina",
+    "RelativePath": "Home/GetClanClanarina/{clanId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetClanIdByName",
+    "RelativePath": "Home/GetClanIdByName/{clanIme}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clanIme",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetClanNapredak",
+    "RelativePath": "Home/GetClanNapredak/{clanId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetClanRezervacije",
+    "RelativePath": "Home/GetClanRezervacije/{clanId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetMemberTermini",
+    "RelativePath": "Home/GetMemberTermini/{clanId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetTerminClanovi",
+    "RelativePath": "Home/GetTerminClanovi/{terminId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "terminId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetTrainerDetails",
+    "RelativePath": "Home/GetTrainerDetails/{trenerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trenerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetTrenerNapredak",
+    "RelativePath": "Home/GetTrenerNapredak/{trenerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trenerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "GetTrenerRezervacije",
+    "RelativePath": "Home/GetTrenerRezervacije/{trenerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trenerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "Index",
+    "RelativePath": "Home/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "RenewMembershipApi",
+    "RelativePath": "Home/RenewMembershipApi/{clanId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "UpdateClan",
+    "RelativePath": "Home/UpdateClan",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clan",
+        "Type": "PTFGym.Models.Clan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.IzvjestajController",
+    "Method": "Index",
+    "RelativePath": "Izvjestaj",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.IzvjestajController",
+    "Method": "Index",
+    "RelativePath": "Izvjestaj/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "Contact",
+    "RelativePath": "Kontakt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.NapredaksController",
+    "Method": "Index",
+    "RelativePath": "Napredak",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.NapredaksController",
+    "Method": "ClanIndex",
+    "RelativePath": "Napredaks/ClanIndex",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.NapredaksController",
+    "Method": "Create",
+    "RelativePath": "Napredaks/Create",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.NapredaksController",
+    "Method": "Create",
+    "RelativePath": "Napredaks/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClanId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TrenerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumUnosa",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Tezina",
+        "Type": "System.Single",
+        "IsRequired": false
+      },
+      {
+        "Name": "Biljeske",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumPocetkaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumKrajaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Rezervacije",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Rezervacija, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Napredak",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Clanarine",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Clanarina, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Specijalnost",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Korisnici",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.ApplicationUser, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Napredaks",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.NapredaksController",
+    "Method": "Delete",
+    "RelativePath": "Napredaks/Delete",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.NapredaksController",
+    "Method": "DeleteConfirmed",
+    "RelativePath": "Napredaks/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.NapredaksController",
+    "Method": "Details",
+    "RelativePath": "Napredaks/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.NapredaksController",
+    "Method": "Edit",
+    "RelativePath": "Napredaks/Edit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.NapredaksController",
+    "Method": "Edit",
+    "RelativePath": "Napredaks/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClanId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TrenerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumUnosa",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Tezina",
+        "Type": "System.Single",
+        "IsRequired": false
+      },
+      {
+        "Name": "Biljeske",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumPocetkaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumKrajaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Rezervacije",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Rezervacija, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Napredak",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Clanarine",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Clanarina, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Specijalnost",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Korisnici",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.ApplicationUser, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Napredaks",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.NapredaksController",
+    "Method": "Index",
+    "RelativePath": "Napredaks/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.NapredaksController",
+    "Method": "TrenerIndex",
+    "RelativePath": "Napredaks/TrenerIndex",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "About",
+    "RelativePath": "Onama",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.HomeController",
+    "Method": "Privacy",
+    "RelativePath": "Privacy",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RatingController",
+    "Method": "Average",
+    "RelativePath": "Rating/Average/{trenerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trenerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RatingController",
+    "Method": "Details",
+    "RelativePath": "Rating/Details/{trenerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trenerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RegisterController",
+    "Method": "Register",
+    "RelativePath": "Register",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.ClanarinasController",
+    "Method": "RenewMembership",
+    "RelativePath": "RenewMembership",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "Index",
+    "RelativePath": "Rezervacija",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "ChangeReservationTime",
+    "RelativePath": "Rezervacijas/ChangeReservationTime",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "newDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "ClanIndex",
+    "RelativePath": "Rezervacijas/ClanIndex",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "ClanIndex",
+    "RelativePath": "Rezervacijas/ClanIndex",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClanId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TrenerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumRezervacije",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumPocetkaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumKrajaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Rezervacije",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Rezervacija, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Napredak",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Clanarine",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Clanarina, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Specijalnost",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Korisnici",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.ApplicationUser, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Napredaks",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "Create",
+    "RelativePath": "Rezervacijas/Create",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "Create",
+    "RelativePath": "Rezervacijas/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClanId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TrenerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumRezervacije",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumPocetkaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumKrajaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Rezervacije",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Rezervacija, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Napredak",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Clanarine",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Clanarina, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Specijalnost",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Korisnici",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.ApplicationUser, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Napredaks",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "Delete",
+    "RelativePath": "Rezervacijas/Delete",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "DeleteConfirmed",
+    "RelativePath": "Rezervacijas/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "Details",
+    "RelativePath": "Rezervacijas/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "Edit",
+    "RelativePath": "Rezervacijas/Edit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "Edit",
+    "RelativePath": "Rezervacijas/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClanId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TrenerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumRezervacije",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumPocetkaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.DatumKrajaClanstva",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Rezervacije",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Rezervacija, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Napredak",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Clanarine",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Clanarina, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clan.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Specijalnost",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Korisnici",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.ApplicationUser, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Napredaks",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "Index",
+    "RelativePath": "Rezervacijas/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.RezervacijasController",
+    "Method": "TrenerIndex",
+    "RelativePath": "Rezervacijas/TrenerIndex",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "Index",
+    "RelativePath": "Termin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "ClanIndex",
+    "RelativePath": "Termins/ClanIndex",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "Create",
+    "RelativePath": "Termins/Create",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "Create",
+    "RelativePath": "Termins/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumVrijeme",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "VrstaTreninga",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaksimalniBrojClanova",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TrenerId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Specijalnost",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Korisnici",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.ApplicationUser, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Napredaks",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clanovi",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Clan, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsUserEnrolled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "Delete",
+    "RelativePath": "Termins/Delete",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "DeleteConfirmed",
+    "RelativePath": "Termins/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "DeleteApi",
+    "RelativePath": "Termins/DeleteApi/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "Details",
+    "RelativePath": "Termins/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "Edit",
+    "RelativePath": "Termins/Edit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "Edit",
+    "RelativePath": "Termins/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DatumVrijeme",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "VrstaTreninga",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaksimalniBrojClanova",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TrenerId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Specijalnost",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Korisnici",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.ApplicationUser, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Trener.Napredaks",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clanovi",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Clan, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsUserEnrolled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "Index",
+    "RelativePath": "Termins/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "JoinApi",
+    "RelativePath": "Termins/JoinApi/{clanId}/{terminId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "terminId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "TrenerIndex",
+    "RelativePath": "Termins/TrenerIndex",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TerminsController",
+    "Method": "TestCreate",
+    "RelativePath": "TestCreate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "termin",
+        "Type": "PTFGym.Models.Termin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TrenersController",
+    "Method": "Index",
+    "RelativePath": "Treneri",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TrenersController",
+    "Method": "Create",
+    "RelativePath": "Treners/Create",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TrenersController",
+    "Method": "Create",
+    "RelativePath": "Treners/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Specijalnost",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Korisnici",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.ApplicationUser, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Napredaks",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TrenersController",
+    "Method": "Delete",
+    "RelativePath": "Treners/Delete",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TrenersController",
+    "Method": "Details",
+    "RelativePath": "Treners/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TrenersController",
+    "Method": "Edit",
+    "RelativePath": "Treners/Edit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TrenersController",
+    "Method": "Edit",
+    "RelativePath": "Treners/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Specijalnost",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Korisnici",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.ApplicationUser, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Termini",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Termin, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Napredaks",
+        "Type": "System.Collections.Generic.List\u00601[[PTFGym.Models.Napredak, PTFGym, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TrenersController",
+    "Method": "Index",
+    "RelativePath": "Treners/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PTFGym.Controllers.TrenersController",
+    "Method": "TrenersDelete",
+    "RelativePath": "Treners/TrenersDelete/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

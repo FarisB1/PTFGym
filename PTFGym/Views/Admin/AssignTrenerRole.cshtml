@@ -1,0 +1,117 @@
+﻿@using PTFGym.Models
+@model IEnumerable<ApplicationUser>
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+@{
+    ViewData["Title"] = "Dodjeljivanje Trenerske Uloge";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">@ViewData["Title"]</h2>
+                </div>
+                <div class="card-body p-4">
+                    <form method="post">
+                        <div class="form-group mb-4">
+                            <label for="userId" class="form-label">Izaberi Korisnika</label>
+                            <select id="userId" name="userId" class="form-select" required>
+                                <option value="">-- Izaberi korisnika --</option>
+                                @foreach (var user in Model)
+                                {
+                                    // Get the current logged-in user
+                                    var currentUser = await UserManager.GetUserAsync(User);
+                                    // Exclude the logged-in user and users with the "Administrator" role
+                                    if (user.Id != currentUser.Id && !await UserManager.IsInRoleAsync(user, "Administrator") && !await UserManager.IsInRoleAsync(user, "Trener"))
+                                    {
+                                                <option value="@user.Id">@user.UserName</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <label for="Ime" class="form-label">Ime i Prezime</label>
+                                    <input type="text" class="form-control" id="Ime" name="Ime" required 
+                                           placeholder="Unesite puno ime" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <label for="specijalnost" class="form-label">Specijalnost</label>
+                                    <input type="text" id="specijalnost" name="specijalnost" class="form-control" 
+                                           required placeholder="npr. Fitness, Yoga, CrossFit" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                Dodijeli Trenersku Ulogu
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        border: none;
+        border-radius: 0.5rem;
+    }
+
+    .card-header {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .card-header h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #555;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-control, .form-select {
+        padding: 0.75rem;
+        border-radius: 0.375rem;
+        border: 1px solid #dee2e6;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+
+    .form-control::placeholder {
+        color: #adb5bd;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,123,255,.15);
+    }
+
+    
+</style>

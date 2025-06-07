@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PTFGym.Models.Termin>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12">
+            <h2 class="text-center mb-4">Termini</h2>
+
+            <div class="text-center mb-4">
+                <a class="btn btn-primary btn-lg shadow" asp-action="Create">
+                    <i class="fas fa-plus-circle"></i> Kreiraj novi
+                </a>
+            </div>
+
+            @if (ViewData["Message"] != null)
+            {
+                <div class="alert alert-info text-center">@ViewData["Message"]</div>
+            }
+            else if (Model == null || !Model.Any())
+            {
+                <div class="alert alert-warning text-center">Nema termina.</div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered shadow-sm">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th class="text-center">Vrijeme Treninga</th>
+                                <th class="text-center">Tip Treninga</th>
+                                <th class="text-center">Maks. Članova</th>
+                                <th class="text-center">Učesnika</th>
+                                <th class="text-center">Akcije</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var termin in Model)
+                            {
+                                <tr>
+                                    <td class="text-center">@termin.DatumVrijeme.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td class="text-center">@termin.VrstaTreninga</td>
+                                    <td class="text-center">@termin.MaksimalniBrojClanova</td>
+                                    <td class="text-center">@((termin.Clanovi?.Count ?? 0))</td>
+                                    <td class="text-center">
+                                        <div class="btn-group d-flex flex-wrap">
+                                            <a asp-action="Edit" asp-route-id="@termin.Id" class="btn btn-sm btn-primary m-1">
+                                                <i class="fas fa-edit"></i> Uredi
+                                            </a>
+                                            <a asp-action="Details" asp-route-id="@termin.Id" class="btn btn-sm btn-info m-1">
+                                                <i class="fas fa-info-circle"></i> Detalji
+                                            </a>
+                                            <a asp-action="Delete" asp-route-id="@termin.Id" class="btn btn-sm btn-danger m-1">
+                                                <i class="fas fa-trash-alt"></i> Obriši
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaAplikacija.Views.AdminDashboardPage"
+             Title="Administratorska nadzorna ploča"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <Grid RowDefinitions="Auto,*" Padding="24">
+        <!-- Header -->
+        <VerticalStackLayout Grid.Row="0" Spacing="4" Margin="0,0,0,16">
+            <Label Text="Upravljanje korisnicima" 
+                   FontSize="28" 
+                   FontAttributes="Bold"/>
+            <Label Text="Upravljajte i uredite korisničke račune" 
+                   TextColor="{StaticResource TextSecondaryColor}"/>
+        </VerticalStackLayout>
+
+        <!-- User List -->
+        <CollectionView Grid.Row="1" 
+                       ItemsSource="{Binding Users}"
+                       EmptyView="Nije pronađen nijedan korisnik">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame>
+                        <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="16">
+                            <Frame Grid.Column="0" 
+                                   BackgroundColor="{StaticResource SecondaryColor}" 
+                                   WidthRequest="40" 
+                                   HeightRequest="40"
+                                   CornerRadius="20"
+                                   Padding="0"
+                                   IsClippedToBounds="True">
+                                <Label Text="{Binding ime, Converter={StaticResource InitialsConverter}}"
+                                       TextColor="White"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                            </Frame>
+
+                            <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                <Label Text="{Binding ime}" 
+                                       FontSize="16" 
+                                       FontAttributes="Bold"/>
+                                <Label Text="{Binding email}" 
+                                       TextColor="{StaticResource TextSecondaryColor}"
+                                       FontSize="14"/>
+                            </VerticalStackLayout>
+
+                            <Button Grid.Column="2" 
+                                    Text="Uredi" 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.EditUserCommand}"
+                                    CommandParameter="{Binding}"
+                                    HeightRequest="36"
+                                    Padding="16,0"
+                                    FontSize="14"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <ActivityIndicator Grid.Row="1" 
+                          IsRunning="{Binding IsBusy}" 
+                          IsVisible="{Binding IsBusy}"
+                          HorizontalOptions="Center"
+                          VerticalOptions="Center"/>
+    </Grid>
+</ContentPage>

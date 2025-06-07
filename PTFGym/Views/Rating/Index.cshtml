@@ -1,0 +1,31 @@
+﻿@model List<PTFGym.Controllers.TrainerViewModel>
+
+@{
+    ViewData["Title"] = "Ocjene trenera";
+}
+
+<div class="container mt-4">
+    <h2>Ocjene trenera</h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+        @foreach (var trainer in Model)
+        {
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">@trainer.Name</h5>
+                            <div class="mb-2">
+                                <span class="h4">@trainer.AverageRating.ToString("F1")</span>
+                                <small class="text-muted">/ 5</small>
+                            </div>
+                            <p class="card-text">
+                                <small class="text-muted">@trainer.TotalRatings ocjena</small>
+                            </p>
+                            <a href="@Url.Action("RateTrainer", new { id = trainer.Id })" 
+                               class="btn btn-primary">Ocjeni trenera</a>
+                        </div>
+                    </div>
+                </div>
+        }
+    </div>
+</div>

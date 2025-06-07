@@ -1,0 +1,68 @@
+﻿@model IEnumerable<PTFGym.Models.Clan>
+
+@{
+    ViewData["Title"] = "Clanovi";
+}
+
+<div class="container">
+
+<h1>Članovi</h1>
+
+    <a class="u-active-black u-btn u-button-style u-hover-black u-palette-1-base u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" asp-action="Create">Kreiraj novi </a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumPocetkaClanstva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumKrajaClanstva)
+            </th>
+            <th> Uredi</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumPocetkaClanstva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumKrajaClanstva)
+            </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">
+                            <button type="button" class="btn" style="background-color: #478AC9; color:white;">
+                                Uredi
+                            </button>
+                        </a>
+                        |
+                        <a asp-action="Details" asp-route-id="@item.Id">
+                            <button type="button" class="btn" style="background-color: #478AC9; color:white;">
+                                Detalji
+                            </button>
+                        </a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">
+                            <button type="button" class="btn btn-danger" style=" color:white;">
+                                Obriši
+                            </button>
+                        </a>
+                    </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

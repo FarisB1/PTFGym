@@ -1,0 +1,62 @@
+﻿@model ClanarinaViewModel
+
+<div class="container">
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
+    
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+
+    <h2>Vaša članarina</h2>
+
+    @if (Model.ActiveMembership != null)
+    {
+        <div class="card mb-3">
+            <div class="card-header">
+                Aktivna članarina
+            </div>
+            <div class="card-body">
+                <p>Početni datum: @Model.ActiveMembership.DatumPocetka.ToShortDateString()</p>
+                <p>Istek članarine: @Model.ActiveMembership.DatumZavrsetka.ToShortDateString()</p>
+                <p>Cijena: @Model.ActiveMembership.Iznos</p>
+
+                @if (Model.CanRenew)
+                {
+                    <form asp-action="RenewMembership" method="post">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-primary">Obnovi članarinu</button>
+                    </form>
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning">Nema aktivne članarine</div>
+    }
+
+    <h3>Historija članarina</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Početni datum</th>
+                <th>Istek članarine</th>
+                <th>Cijena</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var membership in Model.MembershipHistory)
+            {
+                <tr>
+                    <td>@membership.DatumPocetka.ToShortDateString()</td>
+                    <td>@membership.DatumZavrsetka.ToShortDateString()</td>
+                    <td>@membership.Iznos</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaAplikacija.Views.CreateNapredak"
+             Title="Dodaj napredak"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="20">
+            <!-- Header -->
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Dodaj napredak" 
+                       FontSize="28" 
+                       FontAttributes="Bold"/>
+                <Label Text="Pratite napredak članova" 
+                       TextColor="{StaticResource TextSecondaryColor}"/>
+            </VerticalStackLayout>
+
+            <Frame>
+                <VerticalStackLayout Spacing="20">
+                    <!-- Error Message -->
+                    <Label Text="{Binding ErrorMessage}"
+                           IsVisible="{Binding HasError}"
+                           TextColor="{StaticResource ErrorColor}"
+                           HorizontalOptions="Center"/>
+
+                    <!-- Member Selection -->
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Član" FontSize="14"/>
+                        <Frame Padding="16,0" 
+                               HasShadow="False"
+                               BorderColor="#E2E8F0"
+                               CornerRadius="25">
+                            <Picker ItemsSource="{Binding Clanovi}"
+                                    ItemDisplayBinding="{Binding ime}"
+                                    SelectedItem="{Binding SelectedClan}"
+                                    Title="Izaberite člana"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Weight Entry -->
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Težina (kg)" FontSize="14"/>
+                        <Frame Padding="16,0" 
+                               HasShadow="False"
+                               BorderColor="#E2E8F0"
+                               CornerRadius="25">
+                            <Entry Text="{Binding Tezina}"
+                                   Keyboard="Numeric"
+                                   Placeholder="Unesite težinu"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Notes Entry -->
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Bilješke" FontSize="14"/>
+                        <Frame Padding="16" 
+                               HasShadow="False"
+                               BorderColor="#E2E8F0"
+                               CornerRadius="12">
+                            <Editor Text="{Binding Biljeske}"
+                                    Placeholder="Unesite bilješke"
+                                    HeightRequest="100"
+                                    AutoSize="TextChanges"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Date Selection -->
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Datum" FontSize="14"/>
+                        <Frame Padding="16,0" 
+                               HasShadow="False"
+                               BorderColor="#E2E8F0"
+                               CornerRadius="25">
+                            <DatePicker Date="{Binding DatumUnosa}"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Submit Button -->
+                    <Button Text="Spremi"
+                            Command="{Binding SaveCommand}"
+                            Margin="0,12,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

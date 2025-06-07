@@ -1,0 +1,49 @@
+﻿@model PTFGym.Models.Clanarina
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+<h1>Kreiraj</h1>
+
+<h4>Clanarina</h4>
+<hr />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" asp-antiforgery="true" class="text-danger"></div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label asp-for="ClanId" class="control-label"></label>
+                <select asp-for="ClanId" class ="form-control" asp-items="ViewBag.ClanId"></select>
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label asp-for="DatumPocetka" class="control-label"></label>
+                <input asp-for="DatumPocetka" class="form-control" />
+                <span asp-validation-for="DatumPocetka" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label asp-for="DatumZavrsetka" class="control-label"></label>
+                <input asp-for="DatumZavrsetka" class="form-control" />
+                <span asp-validation-for="DatumZavrsetka" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label asp-for="Iznos" class="control-label"></label>
+                <input asp-for="Iznos" class="form-control" />
+                <span asp-validation-for="Iznos" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <input type="submit" value="Kreiraj" class="btn btn-primary" />
+            </div>
+        </form>
+        <div style="margin-top: 20px;">
+            <a asp-action="Index">Nazad</a>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MobilnaAplikacija</name>
+    </assembly>
+    <members>
+        <member name="T:MobilnaAplikacija.ViewModels.NapredakViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.NapredakViewModel.Napredaks">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.NapredakViewModel.napredaks"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.NapredakViewModel.ErrorMessage">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.NapredakViewModel.errorMessage"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.NapredakViewModel.IsLoading">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.NapredakViewModel.isLoading"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.NapredakViewModel.HasError">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.NapredakViewModel.hasError"/>
+        </member>
+        <member name="F:MobilnaAplikacija.ViewModels.NapredakViewModel.loadNapredakCommand">
+            <summary>The backing field for <see cref="P:MobilnaAplikacija.ViewModels.NapredakViewModel.LoadNapredakCommand"/>.</summary>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.NapredakViewModel.LoadNapredakCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MobilnaAplikacija.ViewModels.NapredakViewModel.LoadNapredakAsync"/>.</summary>
+        </member>
+        <member name="T:MobilnaAplikacija.ViewModels.RezervacijeViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.RezervacijeViewModel.Rezervacije">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.RezervacijeViewModel.rezervacije"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.RezervacijeViewModel.ErrorMessage">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.RezervacijeViewModel.errorMessage"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.RezervacijeViewModel.IsLoading">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.RezervacijeViewModel.isLoading"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.RezervacijeViewModel.HasError">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.RezervacijeViewModel.hasError"/>
+        </member>
+        <member name="F:MobilnaAplikacija.ViewModels.RezervacijeViewModel.loadRezervacijeCommand">
+            <summary>The backing field for <see cref="P:MobilnaAplikacija.ViewModels.RezervacijeViewModel.LoadRezervacijeCommand"/>.</summary>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.RezervacijeViewModel.LoadRezervacijeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MobilnaAplikacija.ViewModels.RezervacijeViewModel.LoadRezervacijeAsync"/>.</summary>
+        </member>
+        <member name="T:MobilnaAplikacija.ViewModels.TerminTrenerViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.Termini">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.termini"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.ErrorMessage">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.errorMessage"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.IsLoading">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.isLoading"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.HasError">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.hasError"/>
+        </member>
+        <member name="F:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.loadTerminiCommand">
+            <summary>The backing field for <see cref="P:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.LoadTerminiCommand"/>.</summary>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.LoadTerminiCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MobilnaAplikacija.ViewModels.TerminTrenerViewModel.LoadTerminiAsync"/>.</summary>
+        </member>
+        <member name="T:MobilnaAplikacija.ViewModels.TerminViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TerminViewModel.Termini">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TerminViewModel.termini"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TerminViewModel.ErrorMessage">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TerminViewModel.errorMessage"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TerminViewModel.IsLoading">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TerminViewModel.isLoading"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TerminViewModel.HasError">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TerminViewModel.hasError"/>
+        </member>
+        <member name="F:MobilnaAplikacija.ViewModels.TerminViewModel.loadTerminiCommand">
+            <summary>The backing field for <see cref="P:MobilnaAplikacija.ViewModels.TerminViewModel.LoadTerminiCommand"/>.</summary>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TerminViewModel.LoadTerminiCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MobilnaAplikacija.ViewModels.TerminViewModel.LoadTerminiAsync"/>.</summary>
+        </member>
+        <member name="F:MobilnaAplikacija.ViewModels.TerminViewModel.toggleEnrollmentCommand">
+            <summary>The backing field for <see cref="P:MobilnaAplikacija.ViewModels.TerminViewModel.ToggleEnrollmentCommand"/>.</summary>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TerminViewModel.ToggleEnrollmentCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MobilnaAplikacija.ViewModels.TerminViewModel.ToggleEnrollment(System.Int64)"/>.</summary>
+        </member>
+        <member name="T:MobilnaAplikacija.ViewModels.TreneriViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TreneriViewModel.Treneri">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TreneriViewModel.treneri"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TreneriViewModel.ErrorMessage">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TreneriViewModel.errorMessage"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TreneriViewModel.IsLoading">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TreneriViewModel.isLoading"/>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TreneriViewModel.HasError">
+            <inheritdoc cref="F:MobilnaAplikacija.ViewModels.TreneriViewModel.hasError"/>
+        </member>
+        <member name="F:MobilnaAplikacija.ViewModels.TreneriViewModel.loadTreneriCommand">
+            <summary>The backing field for <see cref="P:MobilnaAplikacija.ViewModels.TreneriViewModel.LoadTreneriCommand"/>.</summary>
+        </member>
+        <member name="P:MobilnaAplikacija.ViewModels.TreneriViewModel.LoadTreneriCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MobilnaAplikacija.ViewModels.TreneriViewModel.LoadTreneriAsync"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Napredaks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Napredaks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ErrorMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ErrorMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Rezervacije">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Rezervacije" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Termini">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Termini" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Treneri">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Treneri" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Napredaks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Napredaks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ErrorMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ErrorMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Rezervacije">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Rezervacije" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Termini">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Termini" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Treneri">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Treneri" generated properties.</summary>
+        </member>
+    </members>
+</doc>

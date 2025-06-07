@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaAplikacija.Views.LoginPage"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <Grid RowDefinitions="2*,3*" Padding="24,0">
+        <!-- Logo/Branding Area -->
+        <VerticalStackLayout Grid.Row="0" 
+                            VerticalOptions="Center" 
+                            Spacing="8">
+            <Label Text="Dobrodošao nazad"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            <Label Text="Prijavite se za nastavak"
+                   FontSize="16"
+                   TextColor="{StaticResource TextSecondaryColor}"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+        <!-- Login Form -->
+        <Frame Grid.Row="1" 
+               Padding="24"
+               Margin="0,24"
+               VerticalOptions="Start">
+            <VerticalStackLayout Spacing="20">
+                <!-- Email Entry -->
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Email"
+                           FontSize="14"
+                           Margin="8,0,0,0"/>
+                    <Frame Padding="16,0" 
+                           HasShadow="False"
+                           BorderColor="#E2E8F0"
+                           CornerRadius="25">
+                        <Entry Text="{Binding Email}" 
+                               Placeholder="Unesite svoju e-poštu"
+                               Keyboard="Email"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent"/>
+                    </Frame>
+                </VerticalStackLayout>
+
+                <!-- Password Entry -->
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Lozinka"
+                           FontSize="14"
+                           Margin="8,0,0,0"/>
+                    <Frame Padding="16,0" 
+                           HasShadow="False"
+                           BorderColor="#E2E8F0"
+                           CornerRadius="25">
+                        <Entry Text="{Binding Password}" 
+                               Placeholder="Unesite svoju lozinku"
+                               IsPassword="True"
+                               HeightRequest="50"
+                               BackgroundColor="Transparent"/>
+                    </Frame>
+                </VerticalStackLayout>
+
+                <!-- Login Button -->
+                <Button Text="Prijaviti se"
+                        Command="{Binding LoginCommand}"
+                        IsEnabled="{Binding !IsBusy}"
+                        Margin="0,12,0,0"/>
+
+                <!-- Loading Indicator -->
+                <ActivityIndicator IsRunning="{Binding IsBusy}"
+                                 IsVisible="{Binding IsBusy}"
+                                 HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

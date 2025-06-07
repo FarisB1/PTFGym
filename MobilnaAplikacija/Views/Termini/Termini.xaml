@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaAplikacija.Views.Termini.Termini">
+    <Grid RowDefinitions="Auto,*">
+        <Button Text="Refresh"
+                Command="{Binding LoadTerminiCommand}"
+                Margin="10"/>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="10" Padding="10">
+                <ActivityIndicator IsRunning="{Binding IsLoading}"
+                                 IsVisible="{Binding IsLoading}"
+                                 HorizontalOptions="Center" />
+
+                <Label Text="{Binding ErrorMessage}"
+                       IsVisible="{Binding HasError}"
+                       TextColor="Red"
+                       HorizontalOptions="Center" />
+
+                <CollectionView ItemsSource="{Binding Termini}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Margin="0,5" Padding="10">
+                                <Grid RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="*,Auto">
+                                    <Label Grid.Row="0" Grid.Column="0" 
+                                           Text="{Binding datumVrijeme, StringFormat='Datum: {0:g}'}"
+                                           FontAttributes="Bold"/>
+
+                                    <Label Grid.Row="1" Grid.Column="0" 
+                                           Text="{Binding vrstaTreninga, StringFormat='Trening: {0}'}"/>
+
+                                    <Label Grid.Row="2" Grid.Column="0" 
+                                           Text="{Binding trenerIme, StringFormat='Trener: {0}'}"/>
+
+                                    <Label Grid.Row="3" Grid.Column="0" 
+                                           Text="{Binding slobodnaMjesta, StringFormat='Slobodna mjesta: {0}'}"/>
+
+                                    <Button Grid.Row="0" Grid.Column="1" Grid.RowSpan="4"
+                                            Text="{Binding IsUserEnrolled, Converter={StaticResource BoolToButtonTextConverter}}"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.ToggleEnrollmentCommand}"
+                                            CommandParameter="{Binding id}"
+                                            BackgroundColor="{Binding IsUserEnrolled, Converter={StaticResource BoolToColorConverter}}"
+                                            VerticalOptions="Center"/>
+                                </Grid>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnDetailsFrameTapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaAplikacija.Views.UserEditPage"
+             Title="Edit Profile"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="20">
+            <!-- Header -->
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Uredi profil" 
+                       FontSize="28" 
+                       FontAttributes="Bold"/>
+                <Label Text="Update your account information" 
+                       TextColor="{StaticResource TextSecondaryColor}"/>
+            </VerticalStackLayout>
+
+            <!-- User Info Section -->
+            <Frame>
+                <VerticalStackLayout Spacing="20">
+                    <!-- Name Field -->
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Ime" 
+                               FontSize="14"/>
+                        <Frame Padding="16,0" 
+                               HasShadow="False"
+                               BorderColor="#E2E8F0"
+                               CornerRadius="25">
+                            <Entry Text="{Binding CurrentUser.ime, FallbackValue=''}"
+                                   Placeholder="Enter your name"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Email Field -->
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Email" 
+                               FontSize="14"/>
+                        <Frame Padding="16,0" 
+                               HasShadow="False"
+                               BorderColor="#E2E8F0"
+                               CornerRadius="25">
+                            <Entry Text="{Binding CurrentUser.email, FallbackValue=''}"
+                                   Placeholder="Enter your email"
+                                   Keyboard="Email"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Save Button -->
+                    <Button Text="Spremi promjenus"
+                            Command="{Binding SaveUserCommand}"
+                            IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}"
+                            Margin="0,12,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Memberships Section -->
+            <VerticalStackLayout Spacing="16">
+                <Label Text="Historija članstva" 
+                       FontSize="20"
+                       FontAttributes="Bold"/>
+
+                <CollectionView ItemsSource="{Binding Memberships}"
+                              EmptyView="Nije pronađena članarina">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame>
+                                <Grid ColumnDefinitions="*,*" ColumnSpacing="16">
+                                    <VerticalStackLayout Grid.Column="0">
+                                        <Label Text="Datum početka"
+                                               FontSize="12"
+                                               TextColor="{StaticResource TextSecondaryColor}"/>
+                                        <Label Text="{Binding DatumPocetka, StringFormat='{0:d}'}"
+                                               FontSize="16"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout Grid.Column="1">
+                                        <Label Text="Datum isteka"
+                                               FontSize="12"
+                                               TextColor="{StaticResource TextSecondaryColor}"/>
+                                        <Label Text="{Binding DatumZavrsetka, StringFormat='{0:d}'}"
+                                               FontSize="16"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Renew Button -->
+                <Button Text="Obnovi članstvo"
+                        Command="{Binding RenewMembershipCommand}"
+                        IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBoolConverter}}"
+                        BackgroundColor="Transparent"
+                        TextColor="{StaticResource PrimaryColor}"
+                        BorderColor="{StaticResource PrimaryColor}"
+                        BorderWidth="1"/>
+            </VerticalStackLayout>
+
+            <!-- Loading Indicator -->
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                             IsVisible="{Binding IsBusy}"
+                             HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

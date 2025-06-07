@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaAplikacija.Views.Termini.CreateTermin"
+             Title="Kreiraj Termin">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="20">
+            <Label Text="Datum i Vrijeme" FontAttributes="Bold"/>
+            <DatePicker x:Name="DatumPicker" Date="{Binding Termin.datumVrijeme}"/>
+            <TimePicker x:Name="VrijemePicker" Time="{Binding Termin.datumVrijeme}"/>
+
+            <Label Text="Vrsta Treninga" FontAttributes="Bold"/>
+            <Entry x:Name="VrstaTreningaEntry" 
+                   Text="{Binding Termin.vrstaTreninga}"
+                   Placeholder="Unesite vrstu treninga"/>
+
+            <Label Text="Maksimalan Broj Članova" FontAttributes="Bold"/>
+            <Entry x:Name="MaksimalniBrojClanovaEntry" 
+                   Text="{Binding Termin.maksimalniBrojClanova}"
+                   Keyboard="Numeric"
+                   Placeholder="Unesite maksimalan broj članova"/>
+
+            <Label Text="Odaberi Trenera" FontAttributes="Bold"/>
+            <Picker x:Name="TrenerPicker"
+                    Title="Odaberi trenera"
+                    ItemsSource="{Binding Treneri}"
+                    ItemDisplayBinding="{Binding Ime}"
+                    SelectedItem="{Binding SelectedTrener}"/>
+
+            <Button Text="Kreiraj Termin" 
+                    Clicked="OnCreateTerminClicked"
+                    HorizontalOptions="Center"
+                    Margin="0,20,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaAplikacija.Views.Treneri"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <Grid RowDefinitions="Auto,*" Padding="24">
+        <!-- Header -->
+        <VerticalStackLayout Spacing="4" Margin="0,0,0,16">
+            <Label Text="Naši treneri" 
+                   FontSize="28" 
+                   FontAttributes="Bold"/>
+            <Label Text="Upoznajte naše stručnjake za profesionalne fitnes usluge" 
+                   TextColor="{StaticResource TextSecondaryColor}"/>
+        </VerticalStackLayout>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="16">
+                <!-- Error Message -->
+                <Label Text="{Binding ErrorMessage}"
+                       IsVisible="{Binding HasError}"
+                       TextColor="{StaticResource ErrorColor}"
+                       HorizontalOptions="Center"/>
+
+                <!-- Trainers List -->
+                <CollectionView ItemsSource="{Binding Treneri}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame>
+                                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="16">
+                                    <!-- Trainer Avatar -->
+                                    <Frame Grid.Column="0" 
+                                           BackgroundColor="{StaticResource SecondaryColor}"
+                                           WidthRequest="60" 
+                                           HeightRequest="60"
+                                           CornerRadius="30"
+                                           Padding="0"
+                                           IsClippedToBounds="True">
+                                        <Label Text="{Binding ime, Converter={StaticResource InitialsConverter}}"
+                                               TextColor="White"
+                                               FontSize="24"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+                                    </Frame>
+
+                                    <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                        <Label Text="{Binding ime}"
+                                               FontSize="18"
+                                               FontAttributes="Bold"/>
+
+                                        <Label Text="{Binding email}"
+                                               TextColor="{StaticResource TextSecondaryColor}"
+                                               FontSize="14"/>
+
+                                        <Frame BackgroundColor="{StaticResource BackgroundColor}"
+                                               Padding="8,4"
+                                               CornerRadius="6"
+                                               HasShadow="False"
+                                               HorizontalOptions="Start">
+                                            <Label Text="{Binding specijalnost}"
+                                                   TextColor="{StaticResource PrimaryColor}"
+                                                   FontSize="12"
+                                                   FontAttributes="Bold"/>
+                                        </Frame>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Loading Indicator -->
+                <ActivityIndicator IsRunning="{Binding IsLoading}"
+                                 IsVisible="{Binding IsLoading}"
+                                 HorizontalOptions="Center"/>
+
+                <!-- Refresh Button -->
+                <Button Text="Osvježiti"
+                        Command="{Binding LoadTreneriCommand}"
+                        Margin="0,16,0,0"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

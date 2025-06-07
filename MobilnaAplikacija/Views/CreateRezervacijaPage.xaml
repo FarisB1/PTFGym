@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaAplikacija.Views.CreateRezervacijaPage"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             Title="New Reservation"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="20">
+            <!-- Header -->
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Kreiraj rezervaciju" 
+                       FontSize="28" 
+                       FontAttributes="Bold"/>
+                <Label Text="Schedule your training session" 
+                       TextColor="{StaticResource TextSecondaryColor}"/>
+            </VerticalStackLayout>
+
+            <Frame>
+                <VerticalStackLayout Spacing="20">
+                    <!-- Error Message -->
+                    <Label Text="{Binding ErrorMessage}"
+                           IsVisible="{Binding ErrorMessage, Converter={StaticResource StringNotEmptyConverter}}"
+                           TextColor="{StaticResource ErrorColor}"
+                           HorizontalOptions="Center"/>
+
+                    <!-- Trainer Selection -->
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Treneri" FontSize="14"/>
+                        <Frame Padding="16,0" 
+                               HasShadow="False"
+                               BorderColor="#E2E8F0"
+                               CornerRadius="25">
+                            <Picker ItemsSource="{Binding Treneri}"
+                                    SelectedItem="{Binding SelectedTrener}"
+                                    ItemDisplayBinding="{Binding ime}"
+                                    Title="Choose a trainer"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Date Selection -->
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Datum" FontSize="14"/>
+                        <Frame Padding="16,0" 
+                               HasShadow="False"
+                               BorderColor="#E2E8F0"
+                               CornerRadius="25">
+                            <DatePicker Date="{Binding SelectedDate}"
+                                       MinimumDate="{Binding Source={x:Static system:DateTime.Now}}"
+                                       Format="D"/>
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Create Button -->
+                    <Button Text="Kreiraj rezervaciju"
+                            Command="{Binding CreateRezervacijaCommand}"
+                            Margin="0,12,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Loading Indicator -->
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                              IsVisible="{Binding IsBusy}"
+                              HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

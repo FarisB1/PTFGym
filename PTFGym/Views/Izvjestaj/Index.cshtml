@@ -1,0 +1,83 @@
+﻿@model PTFGym.Controllers.IzvjestajViewModel
+
+@{
+    ViewData["Title"] = "Izvještaj";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Izvještaj</h1>
+
+    <!-- Summary Cards -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Broj korisnika</h5>
+                    <p class="card-text display-4">@Model.NumberOfUsers</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Broj rezervacija</h5>
+                    <p class="card-text display-4">@Model.NumberOfRezervacijas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Termini per Month -->
+    <div class="card mb-4">
+        <div class="card-header bg-info text-white">
+            <h5 class="card-title mb-0">Termini po mjesecima</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Mjesec</th>
+                        <th scope="col">Broj termina</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.TerminiPerMonth)
+                    {
+                            <tr>
+                                <td>@item.Key</td>
+                                <td>@item.Value</td>
+                            </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Clanarine per Month -->
+    <div class="card mb-4">
+        <div class="card-header bg-warning text-dark">
+            <h5 class="card-title mb-0">Članarine po mjesecima</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Mjesec</th>
+                        <th scope="col">Broj članarina</th>
+                        <th scope="col">Ukupan iznos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.ClanarinePerMonth)
+                    {
+                            <tr>
+                                <td>@item.Key</td>
+                                <td>@item.Value.Count</td>
+                                <td>@item.Value.TotalAmount KM</td> <!-- Format as currency -->
+                            </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

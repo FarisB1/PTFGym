@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MobilnaAplikacija.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MobilnaAplikacija"
+    xmlns:views="clr-namespace:MobilnaAplikacija.Views"
+    xmlns:termini="clr-namespace:MobilnaAplikacija.Views.Termini"
+    Shell.FlyoutBehavior="Disabled"
+    Title="MobilnaAplikacija">
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="LoginPage" />
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Termini"
+        ContentTemplate="{DataTemplate termini:Termini}"
+         />
+
+    <ShellContent
+        Title="Rezervacije"
+        ContentTemplate="{DataTemplate views:Rezervacije}"
+        Route="Rezervacije" />
+
+    <ShellContent
+        Title="Treneri"
+        ContentTemplate="{DataTemplate views:Treneri}"
+        Route="Treneri" />
+    
+    <ShellContent
+        Title="TrenerTermin"
+        ContentTemplate="{DataTemplate termini:TerminTreneri}"
+        Route="TerminTreneri" />
+    
+    <ShellContent
+        Title="Napredak"
+        ContentTemplate="{DataTemplate views:Napredak}"
+        Route="Napredak" />
+    
+    <ShellContent
+        Title="Clanarina"
+        ContentTemplate="{DataTemplate views:MembershipView}"
+        Route="MembershipView" />
+
+</Shell>

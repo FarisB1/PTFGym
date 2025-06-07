@@ -1,0 +1,103 @@
+﻿@model IEnumerable<PTFGym.Models.Rezervacija>
+@{
+    ViewBag.Title = "Rezervacije - Trener";
+}
+
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <!-- Rezervacije Details Section -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="mb-0">Rezervacije za Trenera</h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center">Član</th>
+                                    <th class="text-center">Datum</th>
+                                    <th class="text-center">Akcija</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var rezervacija in Model)
+                                {
+                                    <tr>
+                                        <td class="text-center">@rezervacija.Clan?.Ime</td>
+                                        <td class="text-center">@rezervacija.DatumRezervacije</td>
+                                        <td class="text-center">
+                                            <form asp-action="ChangeReservationTime" method="post" class="d-flex flex-column align-items-center">
+                                                <input type="hidden" name="id" value="@rezervacija.Id" />
+                                                <input type="datetime-local" name="newDate" class="form-control mb-2 w-100" />
+                                                <button type="submit" class="btn btn-success btn-sm w-100">
+                                                    <i class="fas fa-edit"></i> Promijeni
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to List Button -->
+            <div class="text-center mt-4">
+                <a href="@Url.Action("Index", "Rezervacija")" class="btn btn-primary btn-lg shadow">
+                    <i class="fas fa-arrow-left"></i> Nazad
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Styling for better responsiveness -->
+<style>
+    .card-header {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table th, .table td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+
+    @@ media (max-width: 768px) {
+        .btn-lg
+
+    {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .form-control {
+        font-size: 0.85rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    }
+</style>

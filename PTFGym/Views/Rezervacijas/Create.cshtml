@@ -1,0 +1,59 @@
+﻿@model PTFGym.Models.Rezervacija
+
+@{
+    ViewData["Title"] = "Kreiraj";
+}
+
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+<h1>Kreiraj</h1>
+
+<h4>Rezervacija</h4>
+<hr />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" asp-antiforgery="true" class="text-danger"></div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label asp-for="ClanId" class="control-label">Član</label>
+                <select asp-for="ClanId" class ="form-control" asp-items="ViewBag.Clanovi"></select>
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label asp-for="TrenerId" class="control-label">Termin</label>
+                <select asp-for="TrenerId" class="form-control" asp-items="ViewBag.Treneri"></select>
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label asp-for="DatumRezervacije" class="control-label"> Datum Rezervacije</label>
+                <input asp-for="DatumRezervacije" class="form-control" />
+                <span asp-validation-for="DatumRezervacije" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <input type="submit" value="Kreiraj" class="btn btn-primary" />
+            </div>
+        </form>
+        @if (User.IsInRole("Trener"))
+        {
+            <div style="margin-top: 20px;">
+                <a asp-action="TrenerIndex">Nazad</a>
+            </div>
+        }
+        @if (User.IsInRole("Clan"))
+        {
+            <div style="margin-top: 20px;">
+                <a asp-action="ClanIndex">Nazad</a>
+            </div>
+        }
+        @if (User.IsInRole("Administrator"))
+        {
+            <div style="margin-top: 20px;">
+                <a asp-action="Index">Nazad</a>
+            </div>
+        }
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

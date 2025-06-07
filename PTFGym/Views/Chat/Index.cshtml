@@ -1,0 +1,146 @@
+﻿@using System.Security.Claims
+@model List<PTFGym.Models.ChatMessage>
+@{
+    ViewData["Title"] = "Chat";
+    var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+}
+
+<div class="container mt-5">
+    <h2>Chat sa trenerom</h2>
+
+    <!-- Trener Selection Dropdown -->
+    <div class="mb-4">
+        <label for="trenerDropdown">Izaberi trenera:</label>
+        <select id="trenerDropdown" class="form-control">
+            <option value="">-- Izaberi trenera --</option>
+            @if (ViewBag.Treners != null)
+            {
+                foreach (SelectListItem trainer in ViewBag.Treners)
+                {
+                    <option value="@trainer.Value">@trainer.Text</option>
+                }
+            }
+        </select>
+    </div>
+
+    <!-- Chat Box -->
+    <div class="chat-box bg-light p-3" style="height: 400px; overflow-y: scroll;">
+        @if (Model != null)
+        {
+            foreach (var message in Model)
+            {
+                <div class="@(message.SenderId == currentUserId ? "text-end" : "text-start")">
+                    <div class="d-inline-block p-2 m-2 rounded @(message.SenderId == currentUserId ? "bg-primary text-white" : "bg-secondary text-white")">
+                        <p class="mb-0">@message.Message</p>
+                        <small>@message.Timestamp.ToLocalTime().ToString("HH:mm")</small>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+    <!-- Message Input Form -->
+    <!-- Message Input Form -->
+    <div class="mt-3">
+        <div class="input-group">
+            <input type="text" id="messageInput" class="form-control" placeholder="Napišite poruku..." />
+            <button id="sendMessageBtn" class="btn btn-primary">Send</button>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+    <script>
+        let selectedTrainerId = '';
+
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/chatHub")
+            .build();
+
+        // Handle receiving messages
+        connection.on("ReceiveMessage", (senderId, receiverId, message) => {
+            if (senderId === selectedTrainerId || receiverId === selectedTrainerId) {
+                addMessageToChat(senderId, message);
+            }
+        });
+
+        // Start SignalR connection
+        connection.start()
+            .then(() => console.log('SignalR Connected'))
+            .catch(err => console.error('SignalR Connection Error: ', err));
+
+        // Handle trainer selection
+        document.getElementById('trenerDropdown').addEventListener('change', function() {
+            selectedTrainerId = this.value;
+            if (selectedTrainerId) {
+                loadMessages(selectedTrainerId);
+            }
+        });
+
+                function loadMessages(receiverId) {
+            fetch(`/Chat/GetMessages?receiverId=${encodeURIComponent(receiverId)}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const chatBox = document.querySelector('.chat-box');
+                    chatBox.innerHTML = ''; // Clear the chat box before adding new messages
+                    data.forEach(msg => {
+                        addMessageToChat(msg.senderId, msg.message, msg.timestamp);
+                    });
+                })
+                .catch(error => console.error('Error loading messages:', error));
+        }
+
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+
+            if (!selectedTrainerId || !message) {
+                console.log('No trainer selected or message is empty');
+                return;
+            }
+
+            fetch('/Chat/SendMessage', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    receiverId: selectedTrainerId,
+                    message: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                connection.invoke("SendMessage", data.senderId, data.receiverId, data.message);
+                messageInput.value = '';
+            })
+            .catch(error => console.error('Error sending message:', error));
+        }
+
+                function addMessageToChat(senderId, message, timestamp = new Date().toLocaleTimeString()) {
+            const chatBox = document.querySelector('.chat-box');
+            const currentUserId = '@currentUserId';
+            const isCurrentUser = senderId === currentUserId;
+
+            const messageHtml = `
+                <div class="${isCurrentUser ? 'text-end' : 'text-start'}">
+                    <div class="d-inline-block p-2 m-2 rounded ${isCurrentUser ? 'bg-primary text-white' : 'bg-secondary text-white'}">
+                        <p class="mb-0">${message}</p>
+                        <small>${timestamp}</small>
+                    </div>
+                </div>
+            `;
+
+            chatBox.insertAdjacentHTML('beforeend', messageHtml);
+            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+        }
+
+        // Add event listener for send button
+        document.getElementById('sendMessageBtn').addEventListener('click', sendMessage);
+    </script>
+}

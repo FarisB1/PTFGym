@@ -1,0 +1,16 @@
+﻿@model PTFGym.Models.DashboardViewModel
+
+<h2>Welcome</h2>
+
+<p>Your roles:</p>
+<ul>
+    @foreach (var role in Model.Roles)
+    {
+        <li>@role</li>
+    }
+</ul>
+
+@if (Model.Roles.Contains("Administrator"))
+{
+    <p>As an Administrator, you have full access to the system.</p>
+}

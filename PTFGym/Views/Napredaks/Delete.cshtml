@@ -1,0 +1,52 @@
+﻿@model PTFGym.Models.Napredak
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Napredak</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DatumUnosa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DatumUnosa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tezina)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tezina)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Biljeske)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Biljeske)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Clan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Clan.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Trener)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Trener.Email)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

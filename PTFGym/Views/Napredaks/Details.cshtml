@@ -1,0 +1,65 @@
+﻿@model PTFGym.Models.Napredak
+
+@{
+    ViewData["Title"] = "Progress Details";
+}
+
+<div class="container">
+
+<div class="bg-light p-4 mb-4 rounded shadow-sm">
+    <h1 class="display-4 mb-0">Detalji napretka</h1>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-12">
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                    <div class="row g-3">
+
+
+                        <div class="col-sm-6">
+                            <div class="p-3 bg-light rounded">
+                                <div class="small text-muted mb-1">Član</div>
+                                <div class="fw-semibold">@Model.Clan.Ime</div>
+                            </div>
+                        </div>
+
+
+                    <div class="col-sm-6">
+                        <div class="p-3 bg-light rounded">
+                            <div class="small text-muted mb-1">Težina</div>
+                            <div class="fw-semibold">@Model.Tezina kg</div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="p-3 bg-light rounded">
+                            <div class="small text-muted mb-1">Bilješke</div>
+                            <div class="fw-semibold">@Model.Biljeske</div>
+                        </div>
+                    </div>
+
+                        <div class="col-sm-6">
+                            <div class="p-3 bg-light rounded">
+                                <div class="small text-muted mb-1">Trener</div>
+                                <div class="fw-semibold">@Model.Trener.Ime</div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="p-3 bg-light rounded">
+                                <div class="small text-muted mb-1">Datum</div>
+                                <div class="fw-semibold">@Model.DatumUnosa.ToString("MMM dd, yyyy")</div>
+                            </div>
+                        </div>
+                </div>
+
+                @if (User.IsInRole("Trener")){
+                <div class="d-flex gap-2 mt-4">
+                    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Uredi</a>
+                </div>
+                    }
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,244 @@
+﻿@model PTFGym.Controllers.RateTrainerViewModel
+
+@{
+    ViewData["Title"] = $"Ocjenite {Model.TrainerName}";
+}
+
+<div class="container mt-4">
+    <h2>Ocjenite trenera: @Model.TrainerName</h2>
+
+    @if (Model.HasRated)
+    {
+        <div class="alert alert-info">
+            Već ste ocjenili ovog trenera:
+        </div>
+    }
+    else
+    {
+        <div class="rating-section mt-4">
+            <form id="ratingForm" class="needs-validation" novalidate>
+                <input type="hidden" id="trainerId" value="@Model.TrainerId" />
+
+                @Html.AntiForgeryToken()
+                
+                <div class="mb-3">
+                    <label for="score" class="form-label">Rating (1-5 stars)</label>
+                    <div class="star-rating">
+                        @for (int i = 5; i >= 1; i--)
+                        {
+                            <input type="radio" id="star@(i)" name="score" value="@i" required />
+                            <label for="star@(i)">☆</label>
+                        }
+                    </div>
+                    <div class="invalid-feedback">
+                        Molimo izaberite ocjenu.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Comment (optional)</label>
+                    <textarea id="comment" class="form-control" maxlength="500" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Ocjeni</button>
+            </form>
+        </div>
+    }
+
+    <div class="ratings-display mt-5">
+        <h3>Current Ratings</h3>
+        <div class="average-rating mb-4">
+            <h4>Prosječna ocjena: <span id="averageRating">Učitavanje...</span></h4>
+        </div>
+
+        <div class="rating-list">
+            <ul id="ratingList" class="list-unstyled"></ul>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .star-rating {
+            display: inline-flex;
+            flex-direction: row-reverse;
+            font-size: 1.5em;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            cursor: pointer;
+            padding: 0 0.1em;
+            color: #ddd;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label {
+            color: #ffd700;
+        }
+
+        #ratingList li {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        #ratingList li:last-child {
+            border-bottom: none;
+        }
+    </style>
+}
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function getTrainerIdFromPath() {
+                const pathSegments = window.location.pathname.split('/');
+                const id = pathSegments[pathSegments.length - 1];
+                return isNaN(id) ? null : id; // Ensure it's a number
+            }
+
+            const trainerId = getTrainerIdFromPath();
+            console.log("Trainer ID from URL path:", trainerId);
+
+            if (!trainerId) {
+                console.error("Trainer ID is missing or invalid.");
+                return;
+            }
+
+            // Fetch and display the average rating
+            function updateAverageRating() {
+                fetch(`/Rating/Average/${trainerId}`)
+                    .then(response => {
+                        if (!response.ok) throw new Error('Failed to fetch average rating');
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log("API Response:", data);
+
+                        const avgRatingElement = document.getElementById('averageRating');
+                        avgRatingElement.textContent = data.averageRating
+                            ? `${data.averageRating} / 5`
+                            : "No ratings yet.";
+                    })
+                    .catch(error => console.error('Error fetching average rating:', error));
+            }
+
+            // Fetch and display rating details
+                    // Fetch and display rating details
+                function updateRatingList() {
+            const ratingList = document.getElementById('ratingList');
+            ratingList.innerHTML = '<li>Loading ratings...</li>';
+
+            fetch(`/Rating/Details/${trainerId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    ratingList.innerHTML = '';
+
+                    if (data.message) {
+                        ratingList.innerHTML = `<li class="alert alert-info">${data.message}</li>`;
+                        return;
+                    }
+
+                    if (!Array.isArray(data)) {
+                        throw new Error('Unexpected data format received');
+                    }
+
+                    data.forEach(rating => {
+                        const clanName = rating.clanName || "Anonymous";
+                        const score = rating.score || 0;
+                        const comment = rating.comment || "Komentar nije napisan.";
+                        const timestamp = rating.timestamp
+                            ? new Date(rating.timestamp).toLocaleString()
+                            : "Unknown date";
+
+                        const li = document.createElement('li');
+                        li.className = 'rating-item';
+                        li.innerHTML = `
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <strong>${clanName}</strong>
+                                    <div class="text-warning">
+                                        ${'★'.repeat(score)}${'☆'.repeat(5 - score)}
+                                    </div>
+                                    <p class="mt-2">${comment}</p>
+                                </div>
+                                <small class="text-muted">${timestamp}</small>
+                            </div>
+                        `;
+                        ratingList.appendChild(li);
+                    });
+
+                    if (ratingList.children.length === 0) {
+                        ratingList.innerHTML = '<li class="alert alert-info">No ratings available.</li>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching ratings:', error);
+                    ratingList.innerHTML = `
+                        <li class="alert alert-danger">
+                            Error loading ratings. Please try again later.
+                            ${error.message ? `<br>Details: ${error.message}` : ''}
+                        </li>`;
+                });
+        }
+
+
+            // Handle form submission
+            document.getElementById('ratingForm')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const score = document.querySelector('input[name="score"]:checked')?.value;
+                if (!score) {
+                    alert("Please select a rating.");
+                    return;
+                }
+
+                const comment = document.getElementById('comment').value;
+                const tokenElement = document.querySelector('input[name="__RequestVerificationToken"]');
+                if (!tokenElement) {
+                    console.error("CSRF token not found.");
+                    return;
+                }
+                const token = tokenElement.value;
+
+                fetch('/Rating/Submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'RequestVerificationToken': token
+                    },
+                    body: JSON.stringify({
+                        TrenerId: trainerId,
+                        Score: parseInt(score),
+                        Comment: comment
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Rating submitted successfully!');
+                        location.reload();
+                    } else {
+                        alert(data.message || 'Error submitting rating.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting rating:', error);
+                    alert('Error submitting rating. Please try again.');
+                });
+            });
+
+            // Initialize
+            updateAverageRating();
+            updateRatingList();
+        });
+    </script>
+}

@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PTFGym</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PTFGym.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/nicepage.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/lib/jquery/dist/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 7.2.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+</head>
+<body>
+    <header class="u-clearfix u-header u-header" id="sec-7d19">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <a href="#" class="u-image u-logo u-image-1" data-image-width="209" data-image-height="142">
+                <img src="~/images/logo.png" class="u-logo-image u-logo-image-1">
+            </a>
+            <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+                <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+                    <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+                        <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+                        <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="u-custom-menu u-nav-container">
+                    <ul class="u-nav u-unstyled u-nav-1">
+
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link" asp-area="" asp-controller="Home" asp-action="">Početna</a>
+                        </li>
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link" asp-area="" asp-controller="Home" asp-action="About">O Nama</a>
+                        </li>
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Kontakt</a>
+                        </li>
+
+                        @if (!User.Identity.IsAuthenticated){
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                        </li>
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Administrator"))
+                        {
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Clans" asp-action="Index">Clanovi</a>
+                            </li>
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Clanarinas" asp-action="Index">Clanarine</a>
+                            </li>
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Rezervacija" asp-action="Index">Rezervacije</a>
+                            </li>
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Treneri" asp-action="Index">Treneri</a>
+                            </li>
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Izvjestaj" asp-action="Index">Izvještaj</a>
+                            </li>
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Termins" asp-action="Index">Termini</a>
+                            </li>
+                            <li class="u-nav-item dropdown">
+                                <a class="u-button-style u-nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    @User.Claims.FirstOrDefault(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")?.Value
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                    <li>
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+
+                        @if (User.IsInRole("Trener") && User.IsInRole("Clan"))
+                        {
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Rezervacijas" asp-action="TrenerIndex">Rezervacije</a>
+                            </li>
+                            
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Clanarinas" asp-action="ClanIndex">Clanarina</a>
+                            </li>
+
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Termins" asp-action="TrenerIndex">Termini</a>
+                            </li>
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Napredaks" asp-action="TrenerIndex">Napredak</a>
+                            </li>
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-controller="Chat" asp-action="TrainerChat">Chat</a>
+                            </li>
+                            <li class="u-nav-item dropdown">
+                                <a class="u-button-style u-nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    @User.Claims.FirstOrDefault(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")?.Value
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                    <li>
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        }
+
+                        @if (User.IsInRole("Clan") && !User.IsInRole("Trener"))
+                        {
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Rezervacijas" asp-action="ClanIndex">Rezervacije</a>
+                            </li>
+
+                                <li class="u-nav-item">
+                                    <a class="u-button-style u-nav-link" asp-area="" asp-controller="Clanarinas" asp-action="ClanIndex">Clanarina</a>
+                                </li>
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Termins" asp-action="ClanIndex">Termini</a>
+                            </li>
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Napredaks" asp-action="ClanIndex">Napredak</a>
+                            </li>
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-area="" asp-controller="Rating" asp-action="Index">Ocjene</a>
+                            </li>
+                            <li class="u-nav-item">
+                                <a class="u-button-style u-nav-link" asp-controller="Chat" asp-action="Index">Chat</a>
+                            </li>
+                            <li class="u-nav-item dropdown">
+                                <a class="u-button-style u-nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    @User.Claims.FirstOrDefault(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")?.Value
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                    <li>
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="u-custom-menu u-nav-container-collapse">
+                    <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+                        <div class="u-inner-container-layout u-sidenav-overflow">
+                            <div class="u-menu-close"></div>
+                            <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+
+                                <li class="u-nav-item">
+                                    <a class="u-button-style u-nav-link" asp-area="" asp-controller="Home" asp-action="">Početna</a>
+                                </li>
+                                <li class="u-nav-item">
+                                    <a class="u-button-style u-nav-link" asp-area="" asp-controller="Home" asp-action="About">O Nama</a>
+                                </li>
+                                <li class="u-nav-item">
+                                    <a class="u-button-style u-nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Kontakt</a>
+                                </li>
+
+                                @if (!User.Identity.IsAuthenticated)
+                                {
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                                    </li>
+                                }
+                                @if (User.IsInRole("Administrator"))
+                                {
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Clans" asp-action="Index">Clanovi</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Clanarinas" asp-action="Index">Clanarine</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Rezervacija" asp-action="Index">Rezervacije</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Treneri" asp-action="Index">Treneri</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Izvjestaj" asp-action="Index">Izvještaj</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Termins" asp-action="Index">Termini</a>
+                                    </li>
+                                    <li class="u-nav-item dropdown">
+                                        <a class="u-button-style u-nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            @User.Claims.FirstOrDefault(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")?.Value
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                            <li>
+                                                <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Logout</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                }
+
+                                @if (User.IsInRole("Trener") && User.IsInRole("Clan"))
+                                {
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Rezervacijas" asp-action="TrenerIndex">Rezervacije</a>
+                                    </li>
+
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Clanarinas" asp-action="ClanIndex">Clanarina</a>
+                                    </li>
+
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Termins" asp-action="TrenerIndex">Termini</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Napredaks" asp-action="TrenerIndex">Napredak</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-controller="Chat" asp-action="TrainerChat">Chat</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link " href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            @User.Claims.FirstOrDefault(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")?.Value
+                                        </a>
+                                    </li>
+
+                                    <li class="u-nav-item">
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Logout</a>
+                                    </li>
+
+                                }
+
+                                @if (User.IsInRole("Clan") && !User.IsInRole("Trener"))
+                                {
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Rezervacijas" asp-action="ClanIndex">Rezervacije</a>
+                                    </li>
+
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Clanarinas" asp-action="ClanIndex">Clanarina</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Termins" asp-action="ClanIndex">Termini</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Napredaks" asp-action="ClanIndex">Napredak</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-area="" asp-controller="Rating" asp-action="Index">Ocjene</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link" asp-controller="Chat" asp-action="Index">Chat</a>
+                                    </li>
+                                    <li class="u-nav-item">
+                                        <a class="u-button-style u-nav-link " href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            @User.Claims.FirstOrDefault(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")?.Value
+                                        </a>
+                                    </li>
+
+                                    <li class ="u-nav-item">
+                                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Logout</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top footer text-muted" style="background:white;">
+        <div class="container">
+            &copy; 2024 - PTFGym - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js" defer></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="~/js/site.js" asp-append-version="true" defer></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("Styles", required: false)
+</body>
+</html>

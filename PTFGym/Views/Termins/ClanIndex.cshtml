@@ -1,0 +1,101 @@
+﻿@model IEnumerable<PTFGym.Models.Termin>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <h2 class="text-center mb-4">Termini</h2>
+
+            @if (ViewData["Message"] != null)
+            {
+                <div class="alert alert-info text-center">@ViewData["Message"]</div>
+            }
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped shadow-sm">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="text-center">Vrijeme</th>
+                            <th class="text-center">Tip</th>
+                            <th class="text-center">Maks. učesnika</th>
+                            <th class="text-center">Slobodna mjesta</th>
+                            <th class="text-center">Akcija</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var termin in Model)
+                        {
+                            <tr id="termin-@termin.Id">
+                                <td class="text-center">@termin.DatumVrijeme.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td class="text-center">@termin.VrstaTreninga</td>
+                                <td class="text-center">@termin.MaksimalniBrojClanova</td>
+                                <td class="text-center" id="available-spots-@termin.Id">
+                                    @(@termin.MaksimalniBrojClanova - termin.Clanovi.Count)
+                                </td>
+                                <td class="text-center">
+                                    <div class="d-flex flex-wrap justify-content-center">
+                                        @if (!termin.IsUserEnrolled && termin.MaksimalniBrojClanova > termin.Clanovi.Count)
+                                        {
+                                            <form method="post" action="@Url.Action("Join", "Termins")"
+                                                  class="join-form d-inline mx-1">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="terminId" value="@termin.Id" />
+                                                <button type="submit" class="btn btn-success btn-sm rounded-pill shadow">
+                                                    <i class="fas fa-user-plus"></i> Join
+                                                </button>
+                                            </form>
+                                        }
+                                        @if (termin.IsUserEnrolled)
+                                        {
+                                            <span class="badge badge-primary p-2 mx-1" style="color:black">Učestvujete</span>
+                                        }
+                                        @if (termin.MaksimalniBrojClanova <= termin.Clanovi.Count)
+                                        {
+                                            <span class="badge badge-danger p-2 mx-1">Popunjeno</span>
+                                        }
+                                        <a href="@Url.Action("Details", "Termins", new { id = termin.Id })"
+                                           class="btn btn-info btn-sm ml-1 rounded-pill shadow">
+                                            <i class="fas fa-info-circle"></i> Detalji
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.join-form').on('submit', function (e) {
+                e.preventDefault();
+                var form = $(this);
+                var terminId = form.find('input[name="terminId"]').val();
+
+                $.ajax({
+                    url: form.attr('action'),
+                    type: 'POST',
+                    data: form.serialize(),
+                    success: function (data) {
+                        var availableSpots = $('#available-spots-' + terminId);
+                        var newSpots = parseInt(availableSpots.text()) - 1;
+                        availableSpots.text(newSpots);
+
+                        if (newSpots <= 0) {
+                            form.remove(); // Sakrij Join dugme
+                            $('#termin-' + terminId).find('.badge-danger').show(); // Prikaži "Popunjeno"
+                        } else {
+                            form.replaceWith('<span class="badge badge-primary p-2 mx-1">Učestvujete</span>'); // Prikaži "Učestvujete"
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        alert("Greška: " + error);
+                    }
+                });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,71 @@
+﻿@model PTFGym.Models.Napredak
+
+@{
+    ViewData["Title"] = "Create Progress Entry";
+}
+
+<div class="container">
+
+<div class="bg-light p-4 mb-4 rounded shadow-sm">
+    <h1 class="display-4 mb-0">Unos novog napretka</h1>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-12">
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <form asp-action="Create" method="post">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="ClanId" class="form-label fw-semibold">Član</label>
+                        <select asp-for="ClanId" class="form-select" asp-items="ViewBag.ClanId" required>
+                            <option value="">-- Izaberi člana --</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="DatumUnosa" class="form-label fw-semibold">Datum</label>
+                        <input asp-for="DatumUnosa" class="form-control" type="date" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Tezina" class="form-label fw-semibold">Težina (kg)</label>
+                        <input asp-for="Tezina" class="form-control" type="number" step="0.1" required />
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="Biljeske" class="form-label fw-semibold">Bilješke</label>
+                        <textarea asp-for="Biljeske" class="form-control" rows="3"></textarea>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary px-4">Sačuvaj</button>
+                        <a asp-action="TrenerIndex" class="btn btn-outline-secondary">Nazad</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function() {
+            $('form').on('submit', function(e) {
+                console.log('Form submitted');
+                console.log('Form data:', {
+                    ClanId: $('#ClanId').val(),
+                    DatumUnosa: $('#DatumUnosa').val(),
+                    Tezina: $('#Tezina').val(),
+                    Biljeske: $('#Biljeske').val()
+                });
+            });
+        });
+    </script>
+}

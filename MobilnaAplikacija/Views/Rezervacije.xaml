@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaAplikacija.Views.Rezervacije"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <Grid RowDefinitions="Auto,*" Padding="24">
+        <!-- Header -->
+        <VerticalStackLayout Spacing="4" Margin="0,0,0,16">
+            <Label Text="Rezervacije" 
+                   FontSize="28" 
+                   FontAttributes="Bold"/>
+            <Label Text="Vaše zakazane trening sesije" 
+                   TextColor="{StaticResource TextSecondaryColor}"/>
+        </VerticalStackLayout>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="16">
+                <!-- Error Message -->
+                <Label Text="{Binding ErrorMessage}"
+                       IsVisible="{Binding HasError}"
+                       TextColor="{StaticResource ErrorColor}"
+                       HorizontalOptions="Center"/>
+
+                <!-- Reservations List -->
+                <CollectionView ItemsSource="{Binding Rezervacije}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame>
+                                <Grid RowDefinitions="Auto,Auto" RowSpacing="12">
+                                    <Grid ColumnDefinitions="*,Auto">
+                                        <Label Grid.Column="0"
+                                               Text="{Binding datumRezervacije, StringFormat='{0:dddd, MMMM d}'}"
+                                               FontSize="16"
+                                               FontAttributes="Bold"/>
+
+                                        <Label Grid.Column="1"
+                                               Text="{Binding datumRezervacije, StringFormat='{0:HH:mm}'}"
+                                               FontSize="16"
+                                               TextColor="{StaticResource PrimaryColor}"
+                                               FontAttributes="Bold"/>
+                                    </Grid>
+
+                                    <Grid Grid.Row="1" ColumnDefinitions="*,*" ColumnSpacing="16">
+                                        <VerticalStackLayout Grid.Column="0">
+                                            <Label Text="Trener"
+                                                   FontSize="12"
+                                                   TextColor="{StaticResource TextSecondaryColor}"/>
+                                            <Label Text="{Binding trenerIme}"
+                                                   FontSize="14"/>
+                                        </VerticalStackLayout>
+
+                                        <VerticalStackLayout Grid.Column="1">
+                                            <Label Text="Član"
+                                                   FontSize="12"
+                                                   TextColor="{StaticResource TextSecondaryColor}"/>
+                                            <Label Text="{Binding clanIme}"
+                                                   FontSize="14"/>
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Loading Indicator -->
+                <ActivityIndicator IsRunning="{Binding IsLoading}"
+                                 IsVisible="{Binding IsLoading}"
+                                 HorizontalOptions="Center"/>
+
+                <!-- Refresh Button -->
+                <Button Text="Osvježiti"
+                        Command="{Binding LoadRezervacijeCommand}"
+                        Margin="0,16,0,0"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

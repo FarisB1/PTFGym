@@ -1,0 +1,70 @@
+﻿@model IEnumerable<PTFGym.Models.Clanarina>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+
+<h1>Index</h1>
+
+<a class="u-active-black u-btn u-button-style u-hover-black u-palette-1-base u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" asp-action="Create">Kreiraj novi </a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumPocetka)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatumZavrsetka)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Iznos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clan)
+            </th>
+
+            <th> Uredi</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumPocetka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatumZavrsetka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iznos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clan.Ime)
+            </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">
+                            <button type="button" class="btn" style="background-color: #478AC9; color:white;">
+                                Uredi
+                            </button>
+                        </a>
+                        |
+                        <a asp-action="Details" asp-route-id="@item.Id">
+                            <button type="button" class="btn" style="background-color: #478AC9; color:white;">
+                                Detalji
+                            </button>
+                        </a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">
+                            <button type="button" class="btn btn-danger" style=" color:white;">
+                                Obriši
+                            </button>
+                        </a>
+                    </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+</div>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PTFGym.Models.Napredak>
+
+@{
+    ViewData["Title"] = "Clan Napredak";
+}
+
+<div class="container">
+<div class="bg-light p-4 mb-4 rounded shadow-sm">
+    <h1 class="display-4 mb-0">Napredak @ViewData["ClanName"]</h1>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="bg-light">
+                        <tr>
+                            <th>Trener</th>
+                            <th>Datum</th>
+                            <th>Težina</th>
+                            <th>Bilješke</th>
+                            <th>Detalji</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="fw-semibold">@item.Trener.Ime</div>
+                                </td>
+                                <td>@item.DatumUnosa.ToString("MMM dd, yyyy")</td>
+                                <td>@item.Tezina kg</td>
+                                <td>
+                                    <div class="text-muted">@item.Biljeske</div>
+                                </td>
+
+                                    <td>
+                                        <a href="@Url.Action("Details", new { id = item.Id })" class="btn btn-primary">Detalji</a>
+                                    </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-info shadow-sm" role="alert">
+        Nema progresa za ovog korisnika.
+    </div>
+}
+
+</div>

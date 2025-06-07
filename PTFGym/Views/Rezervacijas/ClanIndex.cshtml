@@ -1,0 +1,132 @@
+﻿@model PTFGym.Models.Rezervacija
+@{
+    ViewBag.Title = "Rezervacije - Član";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Reservation Form Section -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">Nova Rezervacija</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="ClanIndex" method="post">
+                        <div class="form-group mb-3">
+                            <label for="TrenerId" class="form-label">Izaberite Trenera</label>
+                            <select id="TrenerId" name="TrenerId" class="form-select" required>
+                                <option value="">-- Izaberite Trenera --</option>
+                                @foreach (var trener in ViewBag.Treneri as List<SelectListItem>)
+                                {
+                                    <option value="@trener.Value">@trener.Text</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="DatumRezervacije" class="form-label">Datum Rezervacije</label>
+                            <input asp-for="DatumRezervacije" class="form-control" type="datetime-local" />
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Rezerviši</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Existing Reservations Section -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Moje Rezervacije</h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Trener</th>
+                                    <th>Datum</th>
+                                    <th>Akcije</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var rezervacija in ViewBag.Rezervacije as IEnumerable<PTFGym.Models.Rezervacija>)
+                                {
+                                    <tr>
+                                        <td>@rezervacija.Trener.Ime</td>
+                                        <td>@rezervacija.DatumRezervacije.ToString("dd.MM.yyyy HH:mm")</td>
+                                        <td><a href="@Url.Action("Delete", new { id = @rezervacija.Id })" class="btn btn-warning">Brisanje</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        border: none;
+        margin-bottom: 2rem;
+    }
+
+    .card-header {
+        border-bottom: none;
+        padding: 1rem 1.5rem;
+    }
+
+        .card-header h2, .card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #555;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-control, .form-select {
+        padding: 0.75rem;
+        border-radius: 0.375rem;
+        border: 1px solid #dee2e6;
+    }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+
+    .btn-primary {
+        padding: 0.75rem 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .table {
+        margin-bottom: 0;
+    }
+
+        .table th {
+            font-weight: 500;
+            color: #555;
+        }
+
+        .table td {
+            vertical-align: middle;
+        }
+
+    .table-hover tbody tr:hover {
+        background-color: rgba(0,123,255,.05);
+    
+
+    }
+</style>

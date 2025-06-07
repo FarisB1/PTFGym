@@ -1,0 +1,62 @@
+﻿@model IEnumerable<PTFGym.Models.Napredak>
+
+@{
+    ViewData["Title"] = "Trainer Progress Records";
+}
+
+<div class="container">
+
+<div class="bg-light p-4 mb-4 rounded shadow-sm">
+    <h1 class="display-4 mb-0">Napredak za @ViewData["TrenerName"]</h1>
+</div>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead class="bg-light">
+                    <tr>
+                        <th>Član</th>
+                        <th>Trener</th>
+                        <th>Datum</th>
+                        <th>Težina</th>
+                        <th>Bilješke</th>
+                        <th class="text-end">Akcije</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <div class="fw-semibold">@item.Clan.Ime</div>
+                            </td>
+                            <td>@item.Trener.Ime</td>
+                            <td>@item.DatumUnosa.ToString("MMM dd, yyyy")</td>
+                            <td>@item.Tezina kg</td>
+                            <td>
+                                <div class="text-muted">@item.Biljeske</div>
+                            </td>
+                            <td class="text-end">
+                                <div class="btn-group">
+                                    <a href="@Url.Action("Details", "Napredaks", new { id = item.Id })"
+                                       class="btn btn-outline-primary btn-sm">Detalji</a>
+                                    <a href="@Url.Action("Edit", "Napredaks", new { id = item.Id })"
+                                       class="btn btn-outline-warning btn-sm">Uredi</a>
+                                    <a href="@Url.Action("Delete", "Napredaks", new { id = item.Id })"
+                                       class="btn btn-outline-danger btn-sm">Brisanje</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<a href="@Url.Action("Create", "Napredaks")" class="btn btn-primary">
+    Dodaj novi
+</a>
+
+</div>

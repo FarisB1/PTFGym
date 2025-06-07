@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaAplikacija.Views.Napredak"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <Grid RowDefinitions="Auto,*" Padding="24">
+        <!-- Header -->
+        <VerticalStackLayout Spacing="4" Margin="0,0,0,16">
+            <Label Text="Praćenje napretka" 
+                   FontSize="28" 
+                   FontAttributes="Bold"/>
+            <Label Text="Pratite svoje fitness putovanje" 
+                   TextColor="{StaticResource TextSecondaryColor}"/>
+        </VerticalStackLayout>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="16">
+                <!-- Error Message -->
+                <Label Text="{Binding ErrorMessage}"
+                       IsVisible="{Binding HasError}"
+                       TextColor="{StaticResource ErrorColor}"
+                       HorizontalOptions="Center"/>
+
+                <!-- Progress List -->
+                <CollectionView ItemsSource="{Binding Napredaks}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame>
+                                <Grid RowDefinitions="Auto,*" RowSpacing="12">
+                                    <Grid ColumnDefinitions="*,Auto">
+                                        <Label Grid.Column="0"
+                                               Text="{Binding datumUnosa, StringFormat='{0:d}'}"
+                                               FontSize="16"
+                                               FontAttributes="Bold"/>
+
+                                        <Label Grid.Column="1"
+                                               Text="{Binding tezina, StringFormat='{0:F1} kg'}"
+                                               FontSize="18"
+                                               FontAttributes="Bold"
+                                               TextColor="{StaticResource PrimaryColor}"/>
+                                    </Grid>
+
+                                    <VerticalStackLayout Grid.Row="1" Spacing="8">
+                                        <Label Text="{Binding clanIme, StringFormat='Član: {0}'}"
+                                               TextColor="{StaticResource TextSecondaryColor}"
+                                               FontSize="14"/>
+
+                                        <Frame BackgroundColor="{StaticResource BackgroundColor}"
+                                               Padding="12"
+                                               CornerRadius="8"
+                                               HasShadow="False"
+                                               IsVisible="{Binding biljeske, Converter={StaticResource StringNotEmptyConverter}}">
+                                            <Label Text="{Binding biljeske}"
+                                                   TextColor="{StaticResource TextSecondaryColor}"
+                                                   FontSize="14"/>
+                                        </Frame>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Loading Indicator -->
+                <ActivityIndicator IsRunning="{Binding IsLoading}"
+                                 IsVisible="{Binding IsLoading}"
+                                 HorizontalOptions="Center"/>
+
+                <!-- Refresh Button -->
+                <Button Text="Osvježiti"
+                        Command="{Binding LoadNapredakCommand}"
+                        Margin="0,16,0,0"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

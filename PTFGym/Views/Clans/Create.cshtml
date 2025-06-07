@@ -1,0 +1,55 @@
+﻿@model PTFGym.Models.Clan
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8">
+        <h1>Kreiraj</h1>
+
+        <h4>Član</h4>
+        <hr />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" asp-antiforgery="true" class="text-danger"></div>
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="DatumPocetkaClanstva" class="control-label">Datum početka članstva</label>
+                <input asp-for="DatumPocetkaClanstva" class="form-control" />
+                <span asp-validation-for="DatumPocetkaClanstva" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="DatumKrajaClanstva" class="control-label">Datum kraja članstva</label>
+                <input asp-for="DatumKrajaClanstva" class="form-control" />
+                <span asp-validation-for="DatumKrajaClanstva" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:20px;">
+                <input type="submit" value="Kreiraj" class="btn btn-primary" />
+            </div>
+        </form>
+
+
+        <div style="margin-top:20px;">
+            <a asp-action="Index">Nazad</a>
+        </div>
+    </div>
+    <div class="col-md-2">
+    </div>
+    
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
