@@ -26,8 +26,6 @@ Obuhvaćene funkcionalnosti:
 
 - Interna komunikacija među zaposlenicima
 
-- Savjeti o prehrani od strane nutricionista
-
 - Praćenje prisustva članova
 
 Napomena: Sistem ne uključuje:
@@ -52,8 +50,6 @@ Napomena: Sistem ne uključuje:
 - Povratne informacije i ocjenjivanje trenera/progama
 
 - Centralizovana komunikacija između zaposlenih
-
-- Nutricionistički savjeti za članove
 
 - Evidentiranje prisutnosti članova
 
